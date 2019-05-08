@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="es6">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
+        <input
+          id="todoContents"
+          class="new-todo"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+      </header>
+      <section class="main">
+        <input id="toggle-all" class="toggle-all" type="checkbox" />
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todoContainer" class="todo-list">
+          <!--
+					<li data-id="1" class="completed">
+						<div class="view">
+							<input class="toggle" type="checkbox" checked>
+							<label>completed todo</label>
+							<button class="destroy"></button>
+						</div>
+					</li>
+					<li data-id="2">
+						<div class="view">
+							<input class="toggle" type="checkbox">
+							<label>uncompleted todo</label>
+							<button class="destroy"></button>
+						</div>
+					</li>
+					-->
+        </ul>
+        <footer class="footer">
+          <span class="todo-count"></span>
+          <ul class="filters">
+            <li>
+              <a href="#/" class="selected">All</a>
+            </li>
+            <li>
+              <a href="#/active">Active</a>
+            </li>
+            <li>
+              <a href="#/completed">Completed</a>
+            </li>
+          </ul>
+          <button class="clear-completed">Clear completed</button>
+        </footer>
+      </section>
+    </section>
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
