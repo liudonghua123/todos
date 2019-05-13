@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="es6">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Todos</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- development version, includes helpful console warnings -->
+  <!-- <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script> -->
+  <!-- <script src="https://unpkg.com/vue-class-component@7.1.0/dist/vue-class-component.js"></script> -->
+  <script src="vender/vue.js"></script>
+  <script src="vender/vue-class-component.js"></script>
+
+  <!-- Don't use this in production: -->
+  <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+  <script src="vender/babel.min.js"></script>
+  <!-- <script src="vender/@babel_plugin-proposal-class-properties.js"></script> -->
+  <!-- <script src="vender/@babel_plugin-proposal-decorators.js"></script> -->
+</head>
+
+<body>
+  <div id="app">
+    <app />
+  </div>
+  <footer class="info">
+    <p>Double-click to edit a todo</p>
+  </footer>
+  <script src="vender/regenerator-runtime.js"></script>
+  <!-- <script src="vender/babel-plugin-transform-vue-jsx.min.js"></script> -->
+  <script src="js/main.js" 
+    data-plugins="transform-class-properties,transform-decorators-legacy,transform-regenerator" 
+    data-presets="es2015,stage-1" 
+    type="text/babel">
+  </script>
+
+</body>
+
+</html>
