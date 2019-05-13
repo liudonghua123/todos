@@ -1,7 +1,8 @@
 // import Vue from '../vender/vue.esm.browser';
 // import Component from '../vender/vue-class-component.esm';
+const Component = VueClassComponent.default;
 
-@VueClassComponent.default({
+@Component({
   template: `
     <section class="todoapp">
       <header class="header">
@@ -55,66 +56,7 @@
   `
 })
 class App extends Vue {
-  // lifecycle hook
-  mounted() {
-    console.info(`mounted`);
-  }
-
-  // render(h, {node,data,store}) {
-  //   return (
-  //     <section className="todoapp">
-  //       <header className="header">
-  //         <h1>todos</h1>
-  //         <input
-  //           id="todoContents"
-  //           className="new-todo"
-  //           placeholder="What needs to be done?"
-  //           // @keyup.enter="onCreateItem"
-  //           v-model="todoText"
-  //           autoFocus
-  //         />
-  //       </header>
-  //       <section className="main">
-  //         <input id="toggle-all" className="toggle-all" type="checkbox" />
-  //         <label htmlFor="toggle-all">Mark all as complete</label>
-  //         <ul id="todoContainer" className="todo-list">
-  //           <li v-for="item in todoItems" class ="item.isCompleted ? 'completed' : ''">
-  //             <div className="view" >
-  //               <input className="toggle" type="checkbox" checked="item.isCompleted" @change="toggleCompleted(item._id)"/>
-  //               <label onClick="toggleCompleted(item._id)" > {{item.text}} </label>
-  //               <button className="destroy" />
-  //             </div>
-  //           </li>
-  //         </ul>
-  //         <footer className="footer">
-  //           <span className="todo-count" />
-  //           <ul className="filters">
-  //             <li>
-  //               <a href="#/" className="selected" onClick="filterAll">
-  //                 All
-  //               </a>
-  //             </li>
-  //             <li>
-  //               <a href="#/active" onClick="filterActive">
-  //                 Active
-  //               </a>
-  //             </li>
-  //             <li>
-  //               <a href="#/completed" onClick="filterCompleted">
-  //                 Completed
-  //               </a>
-  //             </li>
-  //           </ul>
-  //           <button className="clear-completed" onClick="clearCompleted">
-  //             Clear completed
-  //           </button>
-  //         </footer>
-  //       </section>
-  //     </section>
-  //   );
-  // }
   data() {
-    console.info(`data`);
     return {
       todoItems: [],
       todoText: '',
@@ -133,13 +75,20 @@ class App extends Vue {
   }
 
   /**
-   * 当组件挂载时，类似于 ready 事件
+   * 组件创建
    */
   async created() {
-    console.info(`created`);
     await this.login();
     await this.loadTodoItems();
   }
+
+  /**
+   * 组件加载，类似于 react 的 componentDidMount
+   */
+  mounted() {
+    // console.info(`mounted`);
+  }
+
   /**
    * 登录获取其他api接口的认证 token
    */
