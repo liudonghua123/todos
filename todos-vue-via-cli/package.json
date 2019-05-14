@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
@@ -29,9 +30,14 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off"
+    },
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "babel-eslint",
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
     }
   },
   "postcss": {

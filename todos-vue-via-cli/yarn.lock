@@ -7732,6 +7732,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-class-component@^7.1.0:
+  version "7.1.0"
+  resolved "http://r.cnpmjs.org/vue-class-component/download/vue-class-component-7.1.0.tgz#b33efcb10e17236d684f70b1e96f1946ec793e87"
+  integrity sha1-sz78sQ4XI21oT3Cx6W8ZRux5Poc=
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
