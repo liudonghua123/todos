@@ -1,5 +1,9 @@
 // import Vue from '../vender/vue.esm.browser';
 // import Component from '../vender/vue-class-component.esm';
+
+// import Component from 'https://unpkg.com/vue@2.6.10/dist/vue.esm.browser.js';
+// import Vue from 'https://unpkg.com/vue-class-component@7.1.0/dist/vue-class-component.esm.js';
+
 const Component = VueClassComponent.default;
 
 @Component({
